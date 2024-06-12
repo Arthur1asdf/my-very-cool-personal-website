@@ -6,7 +6,6 @@ body {
   align-items: center;
 }
 #mainContent {
-  display: flex;
   background-color: grey;
   width: 90%;
   height: 1080px;
@@ -15,14 +14,21 @@ body {
 #sidebarLeft {
   float: left;
 }
+#title {
+  width: 80%;
+  height: 15%;
+  overflow: hidden;
+}
 #gif1 {
   background-image: url(/gifs/sample.gif);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 8%;
+  width: 10%;
+  margin-top: 0.5%;
+  height: 100%;
+  float: left;
 }
 .scrollingText {
-  background-color: black;
   position: relative;
   background-image: url("https://images.cooltext.com/5700707.gif");
   background-size: 100% 100%;
@@ -30,37 +36,45 @@ body {
   white-space: nowrap;
   overflow: visible;
   width: 150%;
-  height: 40%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
 .scrollingText {
-  animation: scroll-text 12s linear infinite;
+  animation: scrollText 12s linear infinite;
 }
 
-@keyframes scroll-text {
+@keyframes scrollText {
   from {
-    transform: translateX(100%);
+    /* 70% gives no delay whereas 
+    100% there is a couple second dealy */
+    transform: translateX(70%);
   }
   to {
     transform: translateX(-100%);
   }
 }
-#title {
-  width: 64%;
-  height: 30%;
+#scrollingTextContainer {
+  width: 80%;
+  height: 100%;
   overflow: hidden;
+  display: inline-block;
 }
 #gif2 {
   background-image: url(/gifs/sample.gif);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 8%;
+  width: 10%;
+  height: 100%;
+  float: right;
+  margin-top: 0.5%;
 }
-
 #navbar {
-  /* Add properties here */
+  background-color: black;
+  width: 80%;
+  height: 5%;
+  overflow: hidden;
 }
 
 #firstSection {
