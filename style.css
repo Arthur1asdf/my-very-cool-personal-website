@@ -1,0 +1,84 @@
+/* IDs */
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mainContent {
+  display: flex;
+  background-color: white;
+  width: 60%;
+  height: 100%;
+  overflow: visible;
+}
+#sidebarLeft {
+  float: left;
+}
+#title {
+  /* Add properties here */
+}
+
+#navbar {
+  /* Add properties here */
+}
+
+#firstSection {
+  /* Add properties here */
+}
+
+#profilePic {
+  /* Add properties here */
+}
+
+#aboutMe {
+  /* Add properties here */
+}
+
+#secondSection {
+  /* Add properties here */
+}
+
+#thirdSection {
+  /* Add properties here */
+}
+
+#latestYoutubeVideo {
+  /* Add properties here */
+}
+
+#announcments {
+  /* Add properties here */
+}
+
+#fourthSection {
+  /* Add properties here */
+}
+
+#fifthSection {
+  /* Add properties here */
+}
+
+#commentSection {
+  /* Add properties here */
+}
+
+#fillerImage {
+  /* Add properties here */
+}
+
+#sidebarRight {
+  float: right;
+}
+#footer {
+  /* Add properties here */
+}
+
+/* Classes */
+.sideBars {
+  width: 10%;
+  height: 700px;
+  background-color: yellow;
+}
+.banner {
+}
