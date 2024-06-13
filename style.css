@@ -9,20 +9,20 @@ body {
   align-items: center;
 }
 #mainContent {
-  width: 70%;
+  width: 60%;
   height: 1080px;
   overflow: hidden;
   border-style: ridge;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 #sidebarLeft {
   overflow: hidden;
   float: left;
 }
 #title {
-  width: 80%;
+  width: 100%;
   height: 15%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 #gif1 {
   background-image: url(/gifs/sample.gif);
@@ -75,8 +75,9 @@ body {
   margin-top: 0.5%;
 }
 #navbar {
+  margin-top: 1%;
   background-color: bisque;
-  width: 80%;
+  width: 100%;
   height: 5%;
   overflow: hidden;
   margin-bottom: 1%;
@@ -84,13 +85,15 @@ body {
 
 #firstSection {
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   height: 30%;
   background-color: blueviolet;
 }
 
 #profilePic {
-  /* Add properties here */
+  background-color: black;
+  width: 50%;
+  height: 100%;
 }
 
 #aboutMe {
@@ -138,16 +141,17 @@ body {
 
 /* Classes */
 .sideBars {
+  padding: 0px 2%;
   display: block;
-  width: 10%;
-  height: 100%;
-  background-color: brown;
+  width: 8%;
+  height: 1080px;
 }
 .banner {
 }
 .sideGifs {
-  margin-top: 100%;
-
   width: 100%;
   height: 11%;
+}
+.firstSideGif {
+  margin-top: 150%;
 }
