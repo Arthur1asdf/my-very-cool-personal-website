@@ -1,17 +1,17 @@
 /* IDs */
 body {
-  background-color: black;
+  background-image: url("/gifs/y2kHelloKittyGif.webp");
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #mainContent {
-  background-color: grey;
-  width: 90%;
+  width: 70%;
   height: 1080px;
   overflow: hidden;
 }
 #sidebarLeft {
+  overflow: hidden;
   float: left;
 }
 #title {
@@ -74,10 +74,14 @@ body {
   width: 80%;
   height: 5%;
   overflow: hidden;
+  margin-bottom: 1%;
 }
 
 #firstSection {
-  /* Add properties here */
+  overflow: hidden;
+  width: 80%;
+  height: 30%;
+  background-color: blueviolet;
 }
 
 #profilePic {
@@ -129,9 +133,18 @@ body {
 
 /* Classes */
 .sideBars {
+  display: block;
   width: 10%;
   height: 100%;
-  background-color: yellow;
+  background-color: brown;
 }
 .banner {
+}
+.sideGifs {
+  margin-top: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 80%;
+  height: 11%;
 }
