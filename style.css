@@ -12,7 +12,6 @@ body {
   width: 60%;
   height: 1080px;
   overflow: hidden;
-  border-style: ridge;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #sidebarLeft {
@@ -20,7 +19,9 @@ body {
   float: left;
 }
 #title {
-  width: 100%;
+  border-style: ridge;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 99.4%;
   height: 15%;
   overflow: hidden;
 }
@@ -75,33 +76,45 @@ body {
   margin-top: 0.5%;
 }
 #navbar {
+  border-style: ridge;
   margin-top: 1%;
-  background-color: bisque;
-  width: 100%;
+  background-color: rgb(139, 133, 133, 95%);
+  width: 99.4%;
   height: 5%;
   overflow: hidden;
   margin-bottom: 1%;
 }
 
 #firstSection {
+  display: flex;
   overflow: hidden;
-  width: 100%;
+  width: 99.4%;
   height: 30%;
-  background-color: blueviolet;
+  margin-bottom: 1%;
 }
 
 #profilePic {
-  background-color: black;
-  width: 50%;
-  height: 100%;
+  border-style: ridge;
+  position: relative;
+  background-color: rgb(139, 133, 133, 95%);
+  margin-left: 5%;
+  width: 24%;
+  height: 98%;
 }
 
 #aboutMe {
-  /* Add properties here */
+  border-style: ridge;
+  position: relative;
+  background-color: rgb(139, 133, 133, 95%);
+  margin-left: 5%;
+  width: 60%;
+  height: 98%;
 }
 
 #secondSection {
-  /* Add properties here */
+  background-color: rgb(139, 133, 133, 95%);
+  width: 100%;
+  height: 5%;
 }
 
 #thirdSection {
