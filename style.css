@@ -30,12 +30,11 @@ body {
 }
 .scrollingText {
   position: relative;
-  background-image: url("https://images.cooltext.com/5700707.gif");
+  background-image: url("https://images.cooltext.com/5700802.gif");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   white-space: nowrap;
-  overflow: visible;
-  width: 150%;
+  width: 250%;
   height: 100%;
   display: flex;
   align-items: center;
