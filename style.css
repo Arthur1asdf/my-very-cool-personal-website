@@ -1,5 +1,8 @@
 /* IDs */
 body {
+  /* gif is by blingee I could not find this gif
+  on tenor so i had to just copy it from an inactive
+  tumblr account */
   background-image: url("/gifs/y2kHelloKittyGif.webp");
   display: flex;
   justify-content: center;
@@ -9,6 +12,7 @@ body {
   width: 70%;
   height: 1080px;
   overflow: hidden;
+  border-style: ridge;
 }
 #sidebarLeft {
   overflow: hidden;
@@ -143,9 +147,7 @@ body {
 }
 .sideGifs {
   margin-top: 100%;
-  margin-left: auto;
-  margin-right: auto;
 
-  width: 80%;
+  width: 100%;
   height: 11%;
 }
