@@ -1,4 +1,7 @@
 /* IDs */
+html {
+  cursor: url("/images/sampleImage.png"), auto;
+}
 body {
   /* gif is by blingee I could not find this gif
   on tenor so i had to just copy it from an inactive
@@ -11,7 +14,7 @@ body {
 #mainContent {
   width: 60%;
   height: 1080px;
-  overflow: hidden;
+  overflow: visible;
   background-color: rgba(0, 0, 0, 0.5);
 }
 #sidebarLeft {
@@ -47,14 +50,14 @@ body {
 }
 
 .scrollingText {
-  animation: scrollText 12s linear infinite;
+  animation: scrollText 10s linear infinite;
 }
 
 @keyframes scrollText {
   from {
-    /* 70% gives no delay whereas 
+    /* 45% gives no delay whereas 
     100% there is a couple second dealy */
-    transform: translateX(70%);
+    transform: translateX(45%);
   }
   to {
     transform: translateX(-100%);
@@ -113,16 +116,26 @@ body {
 
 #secondSection {
   background-color: rgb(139, 133, 133, 95%);
-  width: 100%;
+  width: 99.4%;
   height: 5%;
+  border-style: ridge;
+  margin-bottom: 1%;
 }
 
 #thirdSection {
-  /* Add properties here */
+  overflow: visible;
+  width: 99.4%;
+  height: 40%;
+  margin-bottom: 1%;
 }
 
 #latestYoutubeVideo {
-  /* Add properties here */
+  overflow: visible;
+  border-style: ridge;
+  margin-top: 0.5%;
+  background-color: black;
+  width: 70%;
+  height: 100%;
 }
 
 #announcments {
