@@ -103,6 +103,25 @@ body {
   margin-left: 5%;
   width: 24%;
   height: 98%;
+  overflow: hidden;
+}
+#nameContainer {
+  background-color: rgba(95, 81, 81, 0.747);
+  width: 100%;
+  height: 20%;
+  font-size: 200%;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-style: ridge;
+}
+#pictureContainer {
+  background-image: url("/images/raven.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 79%;
 }
 
 #aboutMe {
