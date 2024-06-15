@@ -131,8 +131,30 @@ body {
   margin-left: 5%;
   width: 60%;
   height: 98%;
+  overflow: hidden;
 }
-
+#headerContainer {
+  background-color: rgba(95, 81, 81, 0.747);
+  width: 100%;
+  height: 20%;
+  font-size: 200%;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  border-bottom-style: ridge;
+  padding-left: 5%;
+}
+#paragraphContainerForScroll {
+  width: 100%;
+  height: 80%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#paragraphContainer {
+  font-size: 150%;
+  font-weight: 500;
+  padding: 5%;
+}
 #secondSection {
   background-color: rgb(139, 133, 133, 95%);
   width: 99.4%;
