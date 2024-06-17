@@ -24,6 +24,7 @@ a:hover {
 #sidebarLeft {
   overflow: hidden;
   float: left;
+  display: none;
 }
 #title {
   border-style: ridge;
@@ -33,7 +34,7 @@ a:hover {
   overflow: hidden;
 }
 #gif1 {
-  background-image: url(/gifs/sample.gif);
+  background-image: url(/gifs/catExplosion.gif);
   background-size: contain;
   background-repeat: no-repeat;
   width: 10%;
@@ -74,7 +75,7 @@ a:hover {
   display: inline-block;
 }
 #gif2 {
-  background-image: url(/gifs/sample.gif);
+  background-image: url(/gifs/catExplosion.gif);
   background-size: contain;
   background-repeat: no-repeat;
   width: 10%;
@@ -124,7 +125,7 @@ a:hover {
   border-bottom-style: ridge;
 }
 #pictureContainer {
-  background-image: url("/images/raven.jpg");
+  background-image: url("/images/femcelFunnyPic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -281,21 +282,25 @@ a:hover {
 }
 
 #shoutBox {
-  width: 10%;
+  width: 30%;
   height: 100%;
   background-color: brown;
 }
 
 #imageAndLinkToMySuperProffesionalSite {
   background-image: url("/images/Screenshot\ 2024-06-15\ 231504.png");
-  background-size: contain;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 70%;
-  height: 100%;
+  width: 60%;
+  background-color: aliceblue;
+  height: 80%;
 }
 
 #sidebarRight {
-  float: right;
+  background-color: rgb(139, 133, 133, 95%);
+  top: 1%;
+  right: 7%;
+  position: fixed;
 }
 #footer {
   display: flex;
@@ -304,21 +309,26 @@ a:hover {
   height: 20%;
   overflow: hidden;
 }
+#notSupposedToSeeThis {
+  margin-top: 60%;
+  font-size: large;
+  font-weight: bolder;
+}
 
 /* Classes */
 .sideBars {
-  padding: 0px 2%;
+  padding: 3.4% 2%;
   display: block;
   width: 8%;
   height: 1080px;
+  border-style: ridge;
+  padding-bottom: 0%;
 }
 
 .sideGifs {
   width: 100%;
   height: 11%;
-}
-.firstSideGif {
-  margin-top: 150%;
+  margin-bottom: 10%;
 }
 
 .blinkies {
