@@ -8,9 +8,7 @@ body {
   tumblr account */
   background-image: url("/gifs/y2kHelloKittyGif.webp");
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  margin-left: 15%;
 a:hover {
   cursor: url("/images/wojackPointing.png"), auto;
 }
