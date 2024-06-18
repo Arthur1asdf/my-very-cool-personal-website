@@ -8,37 +8,29 @@ body {
   tumblr account */
   background-image: url("/gifs/y2kHelloKittyGif.webp");
   display: flex;
+  justify-content: center;
 }
 a:hover {
   cursor: url("/images/wojackPointing.png"), auto;
 }
 #mainContentContainer {
   background-color: rgba(0, 0, 0, 0.5);
-
-  overflow: visible;
-  width: 60%;
-  display: flex;
-  padding-bottom: 9%;
-  margin-left: 10%;
-  display: grid;
-  grid-template-columns: 1fr auto; /* 1fr for the main content and auto for the sidebar */
-  position: relative; /* This will anchor our fixed positioning context */
+  width: 1100px;
 }
 #mainContent {
   width: 100%;
-  height: 1080px;
   overflow: visible;
 }
-#sidebarLeft {
+/* #sidebarLeft {
   overflow: hidden;
   float: left;
   display: none;
-}
+} */
 #title {
   border-style: ridge;
   background-color: rgba(0, 0, 0, 0.4);
   width: 99.4%;
-  height: 15%;
+  height: 162px;
   overflow: hidden;
 }
 #gif1 {
@@ -61,11 +53,9 @@ a:hover {
   display: flex;
   align-items: center;
 }
-
 #scrollingText {
   animation: scrollText 10s linear infinite;
 }
-
 @keyframes scrollText {
   from {
     /* 45% gives no delay whereas 
@@ -91,14 +81,15 @@ a:hover {
   float: right;
   margin-top: 0.5%;
 }
+
 #navbar {
   border-style: ridge;
-  margin-top: 1%;
+  margin-top: 11px;
   background-color: rgb(139, 133, 133, 95%);
   width: 99.4%;
-  height: 5%;
+  height: 54px;
   overflow: hidden;
-  margin-bottom: 1%;
+  margin-bottom: 11px;
 }
 #playOrMuteButton {
   cursor: url("/images/wojackCrying.png"), auto;
@@ -108,10 +99,9 @@ a:hover {
   display: flex;
   overflow: hidden;
   width: 99.4%;
-  height: 40%;
-  margin-bottom: 1%;
+  height: 432px;
+  margin-bottom: 11px;
 }
-
 #profilePic {
   border-style: ridge;
   position: relative;
@@ -139,7 +129,6 @@ a:hover {
   width: 100%;
   height: 60%;
 }
-
 #logoContainer {
   border-top-style: ridge;
   display: flex;
@@ -159,7 +148,6 @@ a:hover {
 #githubLink {
   margin-top: 2%;
 }
-
 #aboutMe {
   border-style: ridge;
   position: relative;
@@ -191,12 +179,13 @@ a:hover {
   font-weight: 500;
   padding: 5%;
 }
+
 #secondSection {
   background-color: rgb(139, 133, 133, 95%);
   width: 99.4%;
-  height: 5%;
+  height: 54px;
   border-style: ridge;
-  margin-bottom: 1%;
+  margin-bottom: 11px;
   display: block;
 }
 #scrollingBannersContainer {
@@ -210,7 +199,6 @@ a:hover {
   flex-wrap: nowrap;
   animation: bannerScroll 15s linear infinite;
 }
-
 @keyframes bannerScroll {
   /* to make this easier for myself I played around
   with the value in the translateX from 'from' because
@@ -226,22 +214,20 @@ a:hover {
     transform: translateX(-2640px);
   }
 }
+
 #thirdSection {
-  margin-top: 0.5%;
+  margin-top: 11px;
   display: flex;
   overflow-y: visible;
   width: 99.4%;
-  height: 40%;
+  height: 432px;
 }
-
 #latestYoutubeVideo {
   overflow: hidden;
   border-style: ridge;
-
   width: 70%;
   height: 100%;
 }
-
 #blog {
   background-color: rgb(139, 133, 133, 95%);
   width: 25%;
@@ -265,14 +251,10 @@ a:hover {
   height: 80%;
   overflow-y: scroll;
 }
-#mainContentExtended {
-  flex-wrap: wrap;
-  width: 100%;
-  height: 540px;
-}
+
 #fourthSectionContainer {
   width: 99.4%;
-  height: 10%;
+  height: 54px;
   padding-bottom: 1.5%;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -290,7 +272,7 @@ a:hover {
   display: flex;
   background-color: red;
   width: 100%;
-  height: 90%;
+  height: 486px;
   overflow: hidden;
 }
 
@@ -308,31 +290,33 @@ a:hover {
   background-color: aliceblue;
   height: 80%;
 }
-
+#sidebarRightContainer {
+  background-color: blue;
+  position: relative;
+  float: right;
+}
 #sidebarRight {
   background-color: rgb(139, 133, 133, 95%);
   top: 1%;
   position: fixed;
-  min-width: 150px;
   padding: 3.4% 2%;
   display: flex;
-  width: 8%;
+  width: 150px;
   height: 800px;
   border-style: ridge;
   padding-bottom: 1%;
   flex-wrap: wrap;
 }
 #footer {
+  margin-top: 11px;
   display: flex;
   background-color: black;
   width: 100%;
-  height: 20%;
+  height: 108px;
   overflow: hidden;
 }
 
 /* Classes */
-.sideBars {
-}
 
 .sideGifs {
   width: 100%;
