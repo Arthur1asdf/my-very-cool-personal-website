@@ -1,6 +1,7 @@
 /* IDs */
 html {
   cursor: url("/images/sampleImage.png"), auto;
+  overflow: auto;
 }
 body {
   /* gif is by blingee I could not find this gif
@@ -123,11 +124,27 @@ a:hover {
   border-bottom-style: ridge;
 }
 #pictureContainer {
-  background-image: url("/images/femcelFunnyPic.jpg");
+  background-image: url(/images/femcelFunnyPic.jpg);
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 60%;
+  background-color: black;
+}
+#pictureContainerInvisible {
+  background-image: url("/images/wojackMouthOpen.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 4s ease-out;
+}
+#profilePic:hover #pictureContainerInvisible {
+  transition: 1s ease-in;
+
+  opacity: 12%;
 }
 #logoContainer {
   border-top-style: ridge;
@@ -139,11 +156,22 @@ a:hover {
 }
 /* icon from favicon */
 #logo {
-  width: 40%;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #githubLogo {
-  width: 40%;
+  background-image: url(/icons/github.png);
+  background-position: center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+#logo:hover #githubLogo {
+  background-image: url(/images/soyjack.webp);
+  transition: 0.3s;
 }
 #githubLink {
   margin-top: 2%;
@@ -270,16 +298,19 @@ a:hover {
 
 #fifthSection {
   display: flex;
-  background-color: red;
+  align-items: center;
   width: 100%;
   height: 486px;
   overflow: hidden;
 }
 
 #shoutBox {
+  margin-left: 2%;
   width: 30%;
-  height: 100%;
+  height: 95%;
   background-color: brown;
+  margin-right: 5%;
+  border-style: ridge;
 }
 
 #imageAndLinkToMySuperProffesionalSite {
@@ -289,11 +320,13 @@ a:hover {
   width: 60%;
   background-color: aliceblue;
   height: 80%;
+  border-style: ridge;
 }
 #sidebarRightContainer {
   background-color: blue;
   position: relative;
   float: right;
+  margin-left: 1px;
 }
 #sidebarRight {
   background-color: rgb(139, 133, 133, 95%);
@@ -311,9 +344,10 @@ a:hover {
   margin-top: 11px;
   display: flex;
   background-color: black;
-  width: 100%;
+  width: 99.4%;
   height: 108px;
   overflow: hidden;
+  border-style: ridge;
 }
 
 /* Classes */
