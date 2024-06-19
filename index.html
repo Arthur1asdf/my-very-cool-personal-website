@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arthur's super cool and secret and very cool website</title>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -11,6 +12,7 @@
       id="backgroundMusic"
       src="/audio/DEAF KEV - Invincible  Glitch Hop  NCS - Copyright Free Music.mp3"
       autoplay
+      muted
       loop
     >
       Your browser does not support the audio element.
@@ -27,18 +29,28 @@
         </div>
 
         <div id="navbar">
-          <a href="#dummyLink">Youtube</a>
-          <a href="#dummyLink">My address and a picture of where I live</a>
-          <a href="#dummyLink">Portfolio</a>
-          <a href="#dummyLink">Github</a>
+          <a href="#dummyLink">
+            <div class="navButton">Youtube</div>
+          </a>
+          <a
+            href="add sound when click on this and change to guy tipping glasses when hovered"
+          >
+            <div class="navButton">
+              My address and a picture of where I live
+            </div></a
+          >
+          <a href="#dummyLink">
+            <div class="navButton">Portfolio</div>
+          </a>
+          <a href="https://github.com/Arthur1asdf">
+            <div class="navButton">Github</div>
+          </a>
           <a
             href="https://open.spotify.com/user/212uruxtvehvcaffbu22bggfa?si=dac41d1075db4801"
             target="_blank"
-            >Spotify</a
           >
-          <button id="playOrMuteButton" onclick="playOrPauseAudio()">
-            Play/Pause Epic Music
-          </button>
+            <div class="navButton">Spotify</div>
+          </a>
         </div>
         <div id="firstSection">
           <div id="profilePic">
@@ -214,9 +226,7 @@
 
         <div id="fourthSectionContainer">
           <div id="fourthSection">
-            <div class="banners">among us running dont forget</div>
-            <div class="banners"></div>
-            <div class="banners"></div>
+            <img src="/gifs/amongUsRunning.gif" alt="" />
           </div>
         </div>
         <div id="fifthSection">
@@ -233,6 +243,8 @@
       </div>
       <div id="sidebarRightContainer">
         <div class="sideBars" id="sidebarRight">
+          <button id="playOrMuteButton" onclick="playOrPauseAudio()"></button>
+
           <img
             class="firstSideGif sideGifs"
             src="/gifs/azumangaDaiohWalkin.gif"
@@ -241,9 +253,40 @@
           <img class="sideGifs" src="/gifs/P7HZMJ11zxzug1RJgb.webp" alt="" />
           <img class="sideGifs" src="/gifs/kaguya-boom-spedUp.gif" alt="" />
           <img class="sideGifs" src="/gifs/partyRockPony.gif" alt="" />
-          <img class="sideGifs" src="/gifs/osaka-maze-spedUp.gif" alt="" />
+          <img class="sideGifs" src="/gifs/djKhalidDanceSpedUp.gif" alt="" />
           <img class="sideGifs" src="/gifs/osakaPatting.gif" alt="" />
         </div>
+      </div>
+    </div>
+
+    <div id="biblePage">
+      <div class="fadeOut">
+        <h1>Genesis 1:1-3</h1>
+      </div>
+      <div class="fadeOut">
+        <h2>In the beginning God created the heavens and the earth.</h2>
+      </div>
+      <div class="fadeOut">
+        <h2>
+          Now the earth was formless and empty, darkness was over the surface of
+          the deep, and the Spirit of God was hovering over the waters.
+        </h2>
+      </div>
+      <div class="fadeOut">
+        <h2>And God said,</h2>
+      </div>
+      <div id="wordsFadingIn">
+        <h2>and there was light</h2>
+      </div>
+      <button id="unmuteAndFadeAway" onclick="unmuteRevealAndFadeAway()">
+        <h1>"Let there be light,"</h1>
+      </button>
+
+      <div id="top">
+        <a href=""
+          >you are not supposed to be here click me to go back to where you
+          should be</a
+        >
       </div>
     </div>
     <script src="script.js"></script>

@@ -1,7 +1,6 @@
 /* IDs */
 html {
   cursor: url("/images/sampleImage.png"), auto;
-  overflow: auto;
 }
 body {
   /* gif is by blingee I could not find this gif
@@ -10,6 +9,7 @@ body {
   background-image: url("/gifs/y2kHelloKittyGif.webp");
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 a:hover {
   cursor: url("/images/wojackPointing.png"), auto;
@@ -17,6 +17,10 @@ a:hover {
 #mainContentContainer {
   background-color: rgba(0, 0, 0, 0.5);
   width: 1100px;
+  /* the width of sideBarRight so I does not look
+  like there is that much space on the left hand side
+  of screen */
+  margin-right: 150px;
 }
 #mainContent {
   width: 100%;
@@ -91,9 +95,8 @@ a:hover {
   height: 54px;
   overflow: hidden;
   margin-bottom: 11px;
-}
-#playOrMuteButton {
-  cursor: url("/images/wojackCrying.png"), auto;
+  display: flex;
+  align-items: center;
 }
 
 #firstSection {
@@ -332,13 +335,25 @@ a:hover {
   background-color: rgb(139, 133, 133, 95%);
   top: 1%;
   position: fixed;
-  padding: 3.4% 2%;
+  padding: 1% 2%;
+
   display: flex;
   width: 150px;
-  height: 800px;
+  height: 850px;
   border-style: ridge;
   padding-bottom: 1%;
   flex-wrap: wrap;
+  justify-content: center;
+}
+#playOrMuteButton {
+  cursor: url("/images/wojackCrying.png"), auto;
+  margin-bottom: 4px;
+  background-image: url("images/sound.png");
+  background-position: center;
+  background-size: contain;
+  width: 60px;
+  height: 50px;
+  background-repeat: no-repeat;
 }
 #footer {
   margin-top: 11px;
@@ -349,15 +364,40 @@ a:hover {
   overflow: hidden;
   border-style: ridge;
 }
-
-/* Classes */
-
-.sideGifs {
+#biblePage {
+  top: 0;
   width: 100%;
-  height: 120px;
-  margin-bottom: 10%;
+  height: 1970px;
+  background-color: yellow;
+  position: absolute;
+  cursor: auto;
+  text-align: center;
+  font-size: larger;
+  display: none;
+}
+#wordsFadingIn {
+  font-size: 320%;
+  opacity: 0;
+}
+#unmuteAndFadeAway {
+  width: 500px;
+  height: 100px;
+  cursor: pointer;
+}
+#top {
+  margin-top: 600px;
+  height: 500px;
+  cursor: pointer;
+  background-color: aliceblue;
 }
 
+/* Classes */
+.navButton {
+  background-color: yellow;
+  margin-left: 5px;
+  padding: 5px;
+  width: 150px;
+}
 .blinkies {
   width: 300px;
   height: 40px;
@@ -380,4 +420,10 @@ a:hover {
   border-bottom-style: dashed;
   padding-bottom: 10%;
   padding-top: 5%;
+}
+.sideGifs {
+  width: 100%;
+  height: 120px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
