@@ -64,3 +64,30 @@ function unmuteRevealAndFadeAway() {
 document.getElementById("top").addEventListener("click", function () {
   window.scrollTo(0, 0);
 });
+
+//custom cursor is not working on the edges prob due to chrome
+//trying to block it 64px will not work on edges, however after
+//some testing 32px will work however nothing larger so I will
+//be changing my cursor to a smaller version of the custom cursor
+//need e here because it gives us the coords to mouse
+document.addEventListener("mousemove", (e) => {
+  const threshhold = 0.01;
+  const x = e.clientX;
+  const y = e.clientY;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const leftWidth = width * threshhold;
+  const rightThreshhold = 0.05;
+  const rightWidth = width * (1 - rightThreshhold);
+  const topHeight = height * threshhold;
+  const botThreshhold = 0.07;
+  const botHeight = height * (1 - botThreshhold);
+  if (x < leftWidth || x > rightWidth || y < topHeight || y > botHeight) {
+    //this changes the html .documentElement
+    document.documentElement.style.cursor = 'url("/images/test.png"), auto';
+  } else {
+    document.documentElement.style.cursor =
+      'url("/images/sampleImage.png"), auto';
+  }
+});
+const address = document.getElementById("addressButton");
