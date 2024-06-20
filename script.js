@@ -3,7 +3,7 @@
  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
 
 var disqus_config = function () {
-  this.page.url = "https://my-very-cool-personal-website-f1try7rxq.vercel.app"; // Replace PAGE_URL with your page's canonical URL variable
+  this.page.url = "https://my-very-cool-personal-website.vercel.app/"; // Replace PAGE_URL with your page's canonical URL variable
   this.page.identifier = "my-very-awesome-website"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
