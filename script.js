@@ -77,7 +77,7 @@ function unmuteRevealAndFadeAway() {
       biblePage.style.display = "none";
       document.body.style.overflow = "auto";
     }, 3500);
-  }, 60);
+  }, 6000);
 }
 document.getElementById("top").addEventListener("click", function () {
   window.scrollTo(0, 0);
@@ -142,7 +142,6 @@ function applyVolumeChange(index = 0) {
 address.addEventListener("click", () => {
   audio.volume = 0.5;
   clearTimeout(timeoutGif);
-  clearTimeout(timeoutAudio);
   ohMyGodAudio.currentTime = 0;
   ohMyGodAudio.volume = 1.0;
   ohMyGodAudio.muted = false;
