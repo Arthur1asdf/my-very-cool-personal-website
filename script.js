@@ -1,3 +1,21 @@
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+var disqus_config = function () {
+  this.page.url = "https://my-very-cool-personal-website-f1try7rxq.vercel.app"; // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = "my-very-awesome-website"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function () {
+  // DON'T EDIT BELOW THIS LINE
+  var d = document,
+    s = d.createElement("script");
+  s.src = "https://arthurs-super-cool-website.disqus.com/embed.js";
+  s.setAttribute("data-timestamp", +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+
 //when page is reloaded browsers remember when the audio was left off
 //I dont want that so I reset it everytime it loads
 const audio = document.getElementById("backgroundMusic");
@@ -91,3 +109,24 @@ document.addEventListener("mousemove", (e) => {
   }
 });
 const address = document.getElementById("addressButton");
+const whatDaHellGif = document.getElementById("whatDaHell");
+const ohMyGodAudio = document.getElementById("ohMygodBruhAudio");
+let timeoutGif;
+address.addEventListener("click", () => {
+  audio.pause();
+  clearTimeout(timeoutGif);
+  ohMyGodAudio.currentTime = 0;
+  ohMyGodAudio.muted = false;
+  ohMyGodAudio.play();
+  whatDaHellGif.style.display = "block";
+  whatDaHellGif.style.opacity = "80%";
+  timeoutGif = setTimeout(() => {
+    whatDaHellGif.style.opacity = "0";
+    whatDaHellGif.style.transition = "3s";
+    setTimeout(() => {
+      ohMyGodAudio.muted = true;
+      audio.play();
+      whatDaHellGif.style.display = "none";
+    }, 3000);
+  }, 2600);
+});

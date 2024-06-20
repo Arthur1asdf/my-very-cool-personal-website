@@ -208,7 +208,7 @@ a:hover {
   width: 100%;
   height: 80%;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 #paragraphContainer {
   font-size: 150%;
@@ -264,6 +264,7 @@ a:hover {
   width: 70%;
   height: 100%;
 }
+
 #blog {
   background-color: rgb(139, 133, 133, 95%);
   width: 25%;
@@ -330,13 +331,16 @@ a:hover {
   overflow: hidden;
 }
 
-#shoutBox {
+#disqus_thread {
   margin-left: 2%;
-  width: 30%;
-  height: 95%;
-  background-color: brown;
+  width: 100%;
+  height: 90%;
+  background-color: grey;
+  color: white;
   margin-right: 3%;
   border-style: ridge;
+  overflow-y: scroll;
+  padding: 15px;
 }
 
 #imageAndLinkToMySuperProffesionalSite {
@@ -393,6 +397,19 @@ a:hover {
 #footerContent {
   margin-top: -40px;
   width: 70%;
+}
+#whatDaHell {
+  margin-top: 50px;
+  margin-right: 5px;
+  position: absolute;
+  background-image: url("/gifs/whatDaHell.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 300px;
+  padding-left: 30px;
+  display: none;
+  opacity: 0;
 }
 #biblePage {
   top: 0;
@@ -452,6 +469,7 @@ a:hover {
 }
 
 .singleBlogBox {
+  position: relative;
   font-size: larger;
   color: white;
   width: 80%;
@@ -459,7 +477,9 @@ a:hover {
   border-bottom-style: dashed;
   padding-bottom: 10%;
   padding-top: 5%;
+  display: block;
 }
+
 .sideGifs {
   width: 100%;
   height: 120px;
