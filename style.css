@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
 
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -420,7 +420,7 @@ a:hover {
   cursor: auto;
   text-align: center;
   font-size: larger;
-  display: none;
+  /* display: none; */
 }
 #wordsFadingIn {
   font-size: 320%;

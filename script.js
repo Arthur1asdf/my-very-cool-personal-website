@@ -77,7 +77,7 @@ function unmuteRevealAndFadeAway() {
       biblePage.style.display = "none";
       document.body.style.overflow = "auto";
     }, 3500);
-  }, 6000);
+  }, 60);
 }
 document.getElementById("top").addEventListener("click", function () {
   window.scrollTo(0, 0);
@@ -112,20 +112,49 @@ const address = document.getElementById("addressButton");
 const whatDaHellGif = document.getElementById("whatDaHell");
 const ohMyGodAudio = document.getElementById("ohMygodBruhAudio");
 let timeoutGif;
+
+//had a bunch of nested setTimeouts so instead just made an array
+const volumeChanges = [
+  { volume: 0.4, duration: 100 },
+  { volume: 0.3, duration: 100 },
+  { volume: 0.1, duration: 2000 },
+  { volume: 0.3, duration: 3000 },
+  { volume: 0.4, duration: 400 },
+  { volume: 0.6, duration: 400 },
+  { volume: 0.8, duration: 400 },
+  { volume: 1.0, duration: 400 },
+];
+
+//recusive function to do all the setTimeouts
+//if I remember correctly this is "in-order" or maybe pre-order
+// cause everything is behind
+//recursive call so go thru the array in order
+function applyVolumeChange(index = 0) {
+  if (index < volumeChanges.length) {
+    const change = volumeChanges[index];
+    audio.volume = change.volume;
+    setTimeout(() => {
+      applyVolumeChange(index + 1);
+    }, change.duration);
+  }
+}
+
 address.addEventListener("click", () => {
-  audio.pause();
+  audio.volume = 0.5;
   clearTimeout(timeoutGif);
+  clearTimeout(timeoutAudio);
   ohMyGodAudio.currentTime = 0;
+  ohMyGodAudio.volume = 1.0;
   ohMyGodAudio.muted = false;
   ohMyGodAudio.play();
   whatDaHellGif.style.display = "block";
   whatDaHellGif.style.opacity = "80%";
+  applyVolumeChange();
   timeoutGif = setTimeout(() => {
     whatDaHellGif.style.opacity = "0";
     whatDaHellGif.style.transition = "3s";
     setTimeout(() => {
       ohMyGodAudio.muted = true;
-      audio.play();
       whatDaHellGif.style.display = "none";
     }, 3000);
   }, 2600);
