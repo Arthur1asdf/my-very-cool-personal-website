@@ -504,6 +504,7 @@ a:hover {
   height: 50px;
   float: left;
 }
+/* this is for laptop peeps who have 125% so they can still see the sidebar */
 @media only screen and (max-height: 850px) {
   #sidebarRight {
     padding-bottom: 1%;
@@ -515,6 +516,7 @@ a:hover {
     margin-bottom: 15px;
   }
 }
+
 /* if screen is smaller than 1400 pixels
 @media only screen and (min-width: 1000px) and (max-width: 1400px) {
   #mainContentContainer {
@@ -574,95 +576,47 @@ a:hover {
     padding: 5px;
   }
   #firstSection {
-    display: block;
+    display: flex;
     overflow: hidden;
     width: 99.4%;
-    height: 432px;
+    height: 832px;
     margin-bottom: 11px;
+    flex-direction: column;
+    align-items: center;
   }
   #profilePic {
-    border-style: ridge;
-    position: relative;
-    background-color: rgb(139, 133, 133, 95%);
-    margin-left: 5%;
-    width: 24%;
-    height: 98%;
-    overflow: hidden;
-  }
-  #nameContainer {
-    background-color: rgba(95, 81, 81, 0.747);
-    width: 100%;
-    height: 20%;
-    font-size: 200%;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom-style: ridge;
-  }
-  #pictureContainer {
-    background-image: url(/images/femcelFunnyPic.jpg);
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 60%;
-    background-color: black;
-  }
-  #pictureContainerInvisible {
-    background-image: url("/images/wojackMouthOpen.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 4s ease-out;
-  }
-  #profilePic:hover #pictureContainerInvisible {
-    transition: 1s ease-in;
-
-    opacity: 12%;
-  }
-  #logoContainer {
-    border-top-style: ridge;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 19%;
-  }
-  /* icon from favicon */
-  #logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #githubLogo {
-    background-image: url(/icons/github.png);
-    background-position: center;
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  #logo:hover #githubLogo {
-    background-image: url(/images/soyjack.webp);
-    transition: 0.3s;
-  }
-  #githubLink {
-    margin-top: 2%;
+    width: 80%;
+    height: 50%;
+    margin-left: 0;
+    margin-bottom: 11px;
   }
   #aboutMe {
-    border-style: ridge;
-    position: relative;
-    background-color: rgb(139, 133, 133, 95%);
-    margin-left: 5%;
-    width: 60%;
-    height: 98%;
-    overflow: hidden;
+    margin-left: 0;
+    width: 90%;
+    height: 49%;
   }
-  #headerContainer {
+  #thirdSection {
+    margin-top: 11px;
+    display: flex;
+    overflow-y: visible;
+    width: 99.4%;
+    height: 432px;
+  }
+  #latestYoutubeVideo {
+    overflow: hidden;
+    border-style: ridge;
+    width: 70%;
+    height: 100%;
+  }
+
+  #blog {
+    background-color: rgb(139, 133, 133, 95%);
+    width: 25%;
+    height: 100%;
+    margin-left: 3%;
+    border-style: ridge;
+  }
+  #blogHeader {
     background-color: rgba(95, 81, 81, 0.747);
     width: 100%;
     height: 20%;
@@ -670,18 +624,29 @@ a:hover {
     font-weight: bolder;
     display: flex;
     align-items: center;
+    justify-content: center;
     border-bottom-style: ridge;
-    padding-left: 5%;
   }
-  #paragraphContainerForScroll {
+  #blogContent {
     width: 100%;
     height: 80%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
-  #paragraphContainer {
-    font-size: 150%;
-    font-weight: 500;
-    padding: 5%;
+
+  #fourthSectionContainer {
+    width: 99.4%;
+    height: 54px;
+    padding-bottom: 1.5%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #fourthSection {
+    margin-top: 1.5%;
+    background-color: rgb(139, 133, 133, 85%);
+
+    width: 100%;
+    height: 100%;
+    border-style: ridge;
+    margin-bottom: 1%;
+    overflow: hidden;
   }
 }
