@@ -13,6 +13,7 @@ body {
 
   overflow: hidden;
 }
+
 a {
   text-decoration: none;
 }
@@ -27,6 +28,7 @@ a:hover {
   of screen */
   margin-right: 150px;
 }
+
 #mainContent {
   width: 100%;
   overflow: visible;
@@ -335,12 +337,14 @@ a:hover {
   margin-left: 2%;
   width: 100%;
   height: 90%;
-  background-color: grey;
-  color: white;
+  background-color: rgb(65, 62, 62);
   margin-right: 3%;
   border-style: ridge;
   overflow-y: scroll;
   padding: 15px;
+}
+#disqus_thread a {
+  color: white;
 }
 
 #imageAndLinkToMySuperProffesionalSite {
@@ -363,10 +367,10 @@ a:hover {
   top: 1%;
   position: fixed;
   padding: 1% 2%;
-
+  overflow: hidden;
   display: flex;
   width: 150px;
-  height: 850px;
+  height: 94%;
   border-style: ridge;
   padding-bottom: 1%;
   flex-wrap: wrap;
@@ -394,6 +398,7 @@ a:hover {
   align-items: center;
   padding-bottom: 80px;
 }
+
 #footerContent {
   margin-top: -40px;
   width: 70%;
@@ -498,4 +503,185 @@ a:hover {
   width: 180px;
   height: 50px;
   float: left;
+}
+@media only screen and (max-height: 850px) {
+  #sidebarRight {
+    padding-bottom: 1%;
+  }
+  .sideGifs {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+/* if screen is smaller than 1400 pixels
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  #mainContentContainer {
+    background-color: blue;
+    width: 500px;
+  }
+} */
+@media only screen and (max-width: 376px) {
+  #mainContentContainer {
+    width: 373px;
+    margin-left: 150px;
+  }
+  #sidebarRightContainer {
+    display: none;
+  }
+  #scrollingTextContainer {
+    width: 70%;
+  }
+  #scrollingText {
+    width: 900%;
+  }
+  #scrollingText {
+    animation: scrollText 12s linear infinite;
+  }
+  @keyframes scrollText {
+    from {
+      /* 45% gives no delay whereas 
+      100% there is a couple second dealy */
+      /* responsive: transform needs changing for media query */
+      transform: translateX(15%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  #gif1 {
+    width: 15%;
+    margin-top: 10%;
+  }
+  #gif2 {
+    width: 15%;
+    margin-top: 10%;
+  }
+  #navbar {
+    height: 244px;
+    display: block;
+  }
+  .navButton {
+    margin-left: 8px;
+    padding: 5px;
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  .navButtonLong {
+    width: 90%;
+    padding: 5px;
+  }
+  #firstSection {
+    display: block;
+    overflow: hidden;
+    width: 99.4%;
+    height: 432px;
+    margin-bottom: 11px;
+  }
+  #profilePic {
+    border-style: ridge;
+    position: relative;
+    background-color: rgb(139, 133, 133, 95%);
+    margin-left: 5%;
+    width: 24%;
+    height: 98%;
+    overflow: hidden;
+  }
+  #nameContainer {
+    background-color: rgba(95, 81, 81, 0.747);
+    width: 100%;
+    height: 20%;
+    font-size: 200%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-style: ridge;
+  }
+  #pictureContainer {
+    background-image: url(/images/femcelFunnyPic.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60%;
+    background-color: black;
+  }
+  #pictureContainerInvisible {
+    background-image: url("/images/wojackMouthOpen.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 4s ease-out;
+  }
+  #profilePic:hover #pictureContainerInvisible {
+    transition: 1s ease-in;
+
+    opacity: 12%;
+  }
+  #logoContainer {
+    border-top-style: ridge;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 19%;
+  }
+  /* icon from favicon */
+  #logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #githubLogo {
+    background-image: url(/icons/github.png);
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  #logo:hover #githubLogo {
+    background-image: url(/images/soyjack.webp);
+    transition: 0.3s;
+  }
+  #githubLink {
+    margin-top: 2%;
+  }
+  #aboutMe {
+    border-style: ridge;
+    position: relative;
+    background-color: rgb(139, 133, 133, 95%);
+    margin-left: 5%;
+    width: 60%;
+    height: 98%;
+    overflow: hidden;
+  }
+  #headerContainer {
+    background-color: rgba(95, 81, 81, 0.747);
+    width: 100%;
+    height: 20%;
+    font-size: 200%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    border-bottom-style: ridge;
+    padding-left: 5%;
+  }
+  #paragraphContainerForScroll {
+    width: 100%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #paragraphContainer {
+    font-size: 150%;
+    font-weight: 500;
+    padding: 5%;
+  }
 }

@@ -77,7 +77,7 @@ function unmuteRevealAndFadeAway() {
       biblePage.style.display = "none";
       document.body.style.overflow = "auto";
     }, 3500);
-  }, 6000);
+  }, 0);
 }
 document.getElementById("top").addEventListener("click", function () {
   window.scrollTo(0, 0);
