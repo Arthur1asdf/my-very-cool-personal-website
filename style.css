@@ -518,14 +518,8 @@ a:hover {
   }
 }
 
-/* if screen is smaller than 1400 pixels
-@media only screen and (min-width: 1000px) and (max-width: 1400px) {
-  #mainContentContainer {
-    background-color: blue;
-    width: 500px;
-  }
-} */
-@media only screen and (max-width: 600px) {
+/* for phone; anything  600px and under or larger than 300px*/
+@media only screen and (min-width: 300px) and (max-width: 600px) {
   #mainContentContainer {
     width: 370px;
     margin-right: 0;
@@ -665,10 +659,131 @@ a:hover {
   }
   #wordsFadingIn {
     font-size: 190%;
-    opacity: 100%;
+    opacity: 0;
+    margin-top: -40px;
   }
   #unmuteAndFadeAway {
     width: 80%;
     height: 70px;
+    margin-top: -30px;
+  }
+}
+/* for tablets; anything above 600px */
+@media only screen and (min-width: 601px) and (max-width: 1370px) {
+  #mainContentContainer {
+    width: 750px;
+    margin-right: 0;
+  }
+
+  #sidebarRightContainer {
+    display: none;
+  }
+  #gif1 {
+    margin-top: 5%;
+  }
+  #gif2 {
+    margin-top: 5%;
+  }
+  #navbar {
+    height: 244px;
+    display: block;
+    width: 98.4%;
+    overflow-y: auto;
+  }
+  .navButton {
+    margin-left: 25px;
+    padding: 5px;
+    width: 90%;
+    margin-top: 11px;
+    border-radius: 5px;
+  }
+  .navButtonLong {
+    width: 90%;
+    padding: 5px;
+  }
+  #firstSection {
+    display: flex;
+    overflow: hidden;
+    width: 99.4%;
+    height: 432px;
+    margin-bottom: 11px;
+    align-items: center;
+  }
+  #profilePic {
+    width: 40%;
+    height: 98%;
+    margin-left: 10px;
+  }
+  #aboutMe {
+    margin-left: 10px;
+    width: 55%;
+    height: 98%;
+  }
+  #secondSection {
+    width: 98.4%;
+  }
+
+  #latestYoutubeVideo {
+    overflow: hidden;
+    border-style: ridge;
+    width: 67%;
+    height: 98%;
+    margin-left: 2px;
+    margin-bottom: 2%;
+  }
+
+  #blog {
+    overflow: hidden;
+    width: 30%;
+    height: 98%;
+  }
+
+  #fourthSectionContainer {
+    width: 98.4%;
+  }
+  #amongus {
+    animation: amongusScroll 5s linear infinite;
+  }
+  @keyframes amongusScroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-680%);
+    }
+  }
+  #footer {
+    width: 98.4%;
+  }
+  #footerContent {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: 60px 20px 20px 20px;
+    grid-gap: 2px;
+    margin-right: 0;
+    margin-top: 40px;
+    margin-left: 150px;
+  }
+  #footerContent::before {
+    content: " ";
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .cafeBlinkie {
+    margin-left: 80px;
+  }
+  #biblePage {
+    height: 100%;
+    font-size: large;
+  }
+  #wordsFadingIn {
+    font-size: 250%;
+    opacity: 100%;
+    margin-top: 160px;
+  }
+  #unmuteAndFadeAway {
+    width: 80%;
+    height: 70px;
+    margin-top: 160px;
   }
 }
