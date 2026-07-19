@@ -417,30 +417,54 @@ a:hover {
   opacity: 0;
 }
 #biblePage {
-  top: 0;
-  width: 100%;
-  height: 1970px;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
   background-color: yellow;
-  position: absolute;
   cursor: auto;
   text-align: center;
-  font-size: larger;
-  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(0.4rem, 2.5vh, 1.75rem);
+  padding: clamp(1rem, 5vw, 3rem);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+#biblePage > *:first-child {
+  margin-top: auto;
+}
+#biblePage .fadeOut {
+  max-width: 60ch;
+}
+#biblePage h1 {
+  font-size: clamp(1.5rem, min(7vw, 8vh), 3.25rem);
+  margin: 0;
+}
+#biblePage h2 {
+  font-size: clamp(0.9rem, min(3.5vw, 4vh), 1.6rem);
+  margin: 0;
 }
 #wordsFadingIn {
-  font-size: 320%;
   opacity: 0;
 }
+#wordsFadingIn h2 {
+  font-size: clamp(1.5rem, min(8vw, 9vh), 4rem);
+}
 #unmuteAndFadeAway {
-  width: 500px;
-  height: 100px;
+  width: min(500px, 90%);
+  height: auto;
+  margin-bottom: auto;
+  padding: clamp(0.5rem, 2vh, 1.25rem);
   cursor: pointer;
 }
+#unmuteAndFadeAway h1 {
+  font-size: clamp(1.1rem, min(5vw, 5.5vh), 2rem);
+  margin: 0;
+}
 #top {
-  margin-top: 600px;
-  height: 500px;
-  cursor: pointer;
-  background-color: aliceblue;
+  display: none;
 }
 
 /* Classes */
@@ -653,20 +677,6 @@ a:hover {
   .cafeBlinkie {
     margin-left: 80px;
   }
-  #biblePage {
-    height: 100%;
-    font-size: large;
-  }
-  #wordsFadingIn {
-    font-size: 190%;
-    opacity: 0;
-    margin-top: -40px;
-  }
-  #unmuteAndFadeAway {
-    width: 80%;
-    height: 70px;
-    margin-top: -30px;
-  }
 }
 /* for tablets; anything above 600px */
 @media only screen and (min-width: 601px) and (max-width: 1370px) {
@@ -770,19 +780,5 @@ a:hover {
   }
   .cafeBlinkie {
     margin-left: 80px;
-  }
-  #biblePage {
-    height: 100%;
-    font-size: large;
-  }
-  #wordsFadingIn {
-    font-size: 250%;
-    opacity: 100%;
-    margin-top: 160px;
-  }
-  #unmuteAndFadeAway {
-    width: 80%;
-    height: 70px;
-    margin-top: 160px;
   }
 }
