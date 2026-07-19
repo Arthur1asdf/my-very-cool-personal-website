@@ -17,11 +17,7 @@ var disqus_config = function () {
 })();
 
 //when page is reloaded browsers remember when the audio was left off
-//I dont want that so I reset it everytime it loads
 const audio = document.getElementById("backgroundMusic");
-window.onload = function () {
-  audio.currentTime = 0;
-};
 //flag to tell if the program is playing or not
 //default which is playing is 1
 let playOrPaused = 1;
@@ -55,6 +51,7 @@ const biblePage = document.getElementById("biblePage");
 //it gives us a collection of found elements
 const bibleVerse = document.getElementsByClassName("fadeOut");
 function unmuteRevealAndFadeAway() {
+  audio.currentTime = 0;
   audio.muted = false;
   audio.play();
   for (let verse of bibleVerse) {
@@ -104,8 +101,7 @@ document.addEventListener("mousemove", (e) => {
     //this changes the html .documentElement
     document.documentElement.style.cursor = 'url("/images/test.png"), auto';
   } else {
-    document.documentElement.style.cursor =
-      'url("/images/sampleImage.png"), auto';
+    document.documentElement.style.cursor = 'url("/images/sampleImage.png"), auto';
   }
 });
 const address = document.getElementById("addressButton");
