@@ -423,14 +423,18 @@ a:hover {
   background-color: yellow;
   cursor: auto;
   text-align: center;
+  font-size: clamp(1.125rem, 0.95rem + 1vw, 1.2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: clamp(0.4rem, 2.5vh, 1.75rem);
+  gap: clamp(0.5rem, 2.5vh, 1.75rem);
   padding: clamp(1rem, 5vw, 3rem);
   box-sizing: border-box;
   overflow-y: auto;
+}
+#biblePage > * {
+  flex-shrink: 0;
 }
 #biblePage > *:first-child {
   margin-top: auto;
@@ -438,30 +442,23 @@ a:hover {
 #biblePage .fadeOut {
   max-width: 60ch;
 }
-#biblePage h1 {
-  font-size: clamp(1.5rem, min(7vw, 8vh), 3.25rem);
-  margin: 0;
-}
-#biblePage h2 {
-  font-size: clamp(0.9rem, min(3.5vw, 4vh), 1.6rem);
+#biblePage .fadeOut h1,
+#biblePage .fadeOut h2 {
   margin: 0;
 }
 #wordsFadingIn {
   opacity: 0;
 }
 #wordsFadingIn h2 {
-  font-size: clamp(1.5rem, min(8vw, 9vh), 4rem);
+  margin: 0;
+  font-size: clamp(3.25rem, min(10vw, 20vh), 5.76rem);
 }
 #unmuteAndFadeAway {
-  width: min(500px, 90%);
-  height: auto;
+  width: 500px;
+  max-width: 90%;
+  height: 100px;
   margin-bottom: auto;
-  padding: clamp(0.5rem, 2vh, 1.25rem);
   cursor: pointer;
-}
-#unmuteAndFadeAway h1 {
-  font-size: clamp(1.1rem, min(5vw, 5.5vh), 2rem);
-  margin: 0;
 }
 #top {
   display: none;
@@ -677,6 +674,10 @@ a:hover {
   .cafeBlinkie {
     margin-left: 80px;
   }
+  #unmuteAndFadeAway {
+    width: 80vw;
+    height: 70px;
+  }
 }
 /* for tablets; anything above 600px */
 @media only screen and (min-width: 601px) and (max-width: 1370px) {
@@ -780,5 +781,9 @@ a:hover {
   }
   .cafeBlinkie {
     margin-left: 80px;
+  }
+  #unmuteAndFadeAway {
+    width: 80vw;
+    height: 70px;
   }
 }
